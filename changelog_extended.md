@@ -14,9 +14,9 @@
 
 The way above looks nice, it's a shame there's no way to make the spacing less it seems; can't use CSS there
 
-    **🚨Security Fix** (KBN) [CVE-2024-21538](https://www.cve.org/CVERecord?id=CVE-2024-21538), [CVE-2024-47764](https://www.cve.org/CVERecord?id=CVE-2024-47764)
+&#160;&#160;&#160;&#160;**🚨Security Fix** (KBN) [CVE-2024-21538](https://www.cve.org/CVERecord?id=CVE-2024-21538), [CVE-2024-47764](https://www.cve.org/CVERecord?id=CVE-2024-47764)
 
-**🚀New** (KBN) 8.17.0, 8.16.2, 8.16.1, 8.16.0, 8.15.5, 7.17.27, 7.17.26 support
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🚀New** (KBN) 8.17.0, 8.16.2, 8.16.1, 8.16.0, 8.15.5, 7.17.27, 7.17.26 support
 
 * **🚀New** (ES) 8.17.0, 8.16.2, 8.16.1, 8.15.5, 7.17.27, 7.17.26 support
 
