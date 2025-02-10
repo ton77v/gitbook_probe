@@ -10,7 +10,7 @@
 
 </details>
 
-> **🚨Security Fix** (ES) [CVE-2024-47535](https://nvd.nist.gov/vuln/detail/CVE-2024-47535)
+>   **🚨Security Fix** (ES) [CVE-2024-47535](https://nvd.nist.gov/vuln/detail/CVE-2024-47535)
 
 The way above looks nice, hopefully there's a way to make the spacing less? other ways seems to look bad:
 
