@@ -38,10 +38,8 @@ This security fix addresses a critical vulnerability in the AsyncHttpClient (AHC
 
 <details>
 
-<summary>🚨Security Fix (ES) <a href="https://forum.readonlyrest.com/t/eql-requests-returns-data-even-though-they-aren-t-allowed/2679">Data leak through the ESQL API</a> (for ES >= 8.11.0)</summary>
+<summary><strong>🚨Security Fix</strong> (ES) <a href="https://forum.readonlyrest.com/t/eql-requests-returns-data-even-though-they-aren-t-allowed/2679">Data leak through the ESQL API</a> (for ES >= 8.11.0)</summary>
 
 **🚨Security Fix** (ES) [Data leak through the ESQL API](https://forum.readonlyrest.com/t/eql-requests-returns-data-even-though-they-aren-t-allowed/2679) (for ES >= 8.11.0)
 
 </details>
-
-It seems they will make all the summary bold ?
