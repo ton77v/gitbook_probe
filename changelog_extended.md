@@ -9,6 +9,7 @@
 **🚨Security Fix** (ES) [Data leak through the ESQL API](https://forum.readonlyrest.com/t/eql-requests-returns-data-even-though-they-aren-t-allowed/2679) (for ES >= 8.11.0)
 
 </details>
+
 > **🚨Security Fix** (ES) [CVE-2024-47535](https://nvd.nist.gov/vuln/detail/CVE-2024-47535)
 
 The way above looks nice, hopefully there's a way to make the spacing less? other ways seems to look bad:
