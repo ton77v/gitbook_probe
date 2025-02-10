@@ -2,6 +2,10 @@
 
 ### (2025-01-24) What's new in **ROR 1.62.0**
 <details>
+<summary>Expandable block</summary>
+And the details are here
+</details>
+<details>
 <summary>**🚨Security Fix** (ES) [CVE-2024-53990](https://nvd.nist.gov/vuln/detail/CVE-2024-53990)</summary>
 This security fix addresses a critical vulnerability in the AsyncHttpClient (AHC) ... [CVE-2024-53990](https://nvd.nist.gov/vuln/detail/CVE-2024-53990)
 </details>
