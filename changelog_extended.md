@@ -20,7 +20,8 @@ The way above looks nice, it's a shame there's no way to make the spacing less i
 &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;**🚀New** (KBN) 8.17.0, 8.16.2, 8.16.1, 8.16.0, 8.15.5, 7.17.27, 7.17.26 support
 
 normal spaces will transform this into a code block:
-    **🚀New** (ES) 8.17.0, 8.16.2, 8.16.1, 8.15.5, 7.17.27, 7.17.26 support
+
+        **🚀New** (ES) 8.17.0, 8.16.2, 8.16.1, 8.15.5, 7.17.27, 7.17.26 support
 
 * **🚀New** (ES) ESQL support
 
