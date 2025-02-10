@@ -30,15 +30,18 @@ This security fix addresses a critical vulnerability in the AsyncHttpClient (AHC
 
 <summary>**🚨Security Fix** (KBN) [CVE-2024-21538](https://www.cve.org/CVERecord?id=CVE-2024-21538), [CVE-2024-47764](https://www.cve.org/CVERecord?id=CVE-2024-47764), [CVE-2024-52798](https://www.cve.org/CVERecord?id=CVE-2024-52798)</summary>
 
+
+
 </details>
 
 ### (2024-11-20) What's new in **ROR 1.61.1**
+
 <details>
 
-<summary><b>🚨Security Fix</b> (ES) <a href="https://forum.readonlyrest.com/t/eql-requests-returns-data-even-though-they-aren-t-allowed/2679">Data leak through the ESQL API</a> (for ES >= 8.11.0)</summary>
+<summary>🚨Security Fix (ES) <a href="https://forum.readonlyrest.com/t/eql-requests-returns-data-even-though-they-aren-t-allowed/2679">Data leak through the ESQL API</a> (for ES >= 8.11.0)</summary>
 
 **🚨Security Fix** (ES) [Data leak through the ESQL API](https://forum.readonlyrest.com/t/eql-requests-returns-data-even-though-they-aren-t-allowed/2679) (for ES >= 8.11.0)
 
 </details>
 
-
+It seems they will make all the summary bold ?
