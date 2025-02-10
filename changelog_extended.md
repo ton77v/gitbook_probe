@@ -34,4 +34,21 @@ This security fix addresses a critical vulnerability in the AsyncHttpClient (AHC
 
 </details>
 
-\\\*\\\*⚠️Warning\\\*\\\* (KBN) Updated \\\[\\\`readonlyrest\\\_kbn: license: activationKeyRefreshInterval\\\`]\\(https://forum.readonlyrest.com/t/restricting-access-to-some-spaces/2633/4) - the maximum refresh interval is now set to 1 day.
+### (2024-11-20) What's new in **ROR 1.61.1**
+<details>
+
+<summary>**🚨Security Fix** (ES) <a href="https://forum.readonlyrest.com/t/eql-requests-returns-data-even-though-they-aren-t-allowed/2679">Data leak through the ESQL API</a></summary> (for ES >= 8.11.0)
+
+**🚨Security Fix** (ES) [Data leak through the ESQL API](https://forum.readonlyrest.com/t/eql-requests-returns-data-even-though-they-aren-t-allowed/2679) (for ES >= 8.11.0)
+
+</details>
+
+<details>
+
+<summary>Could we use <b>bold</b> or <strong>strong</strong> here?</summary>
+
+**🚨Security Fix** (KBN) [CVE-2024-21538](https://www.cve.org/CVERecord?id=CVE-2024-21538), [CVE-2024-47764](https://www.cve.org/CVERecord?id=CVE-2024-47764)
+
+</details>
+
+
