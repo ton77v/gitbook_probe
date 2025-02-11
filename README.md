@@ -6,6 +6,6 @@ icon: hand-wave
 
 Edited in GitBook
 
-WTF about new files not being added ... ?
+* figuring out how to use the config file
 
 ...
