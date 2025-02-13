@@ -3,56 +3,69 @@
 ### (2025-01-24) What's new in **ROR 1.62.0**
 <details>
 <summary><strong>🚨Security Fix</strong> (ES) <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-53990">CVE-2024-53990</a></summary>
-Description ...
+This security fix addresses a critical vulnerability in the AsyncHttpClient (AHC) library, identified as CVE-2024-53990. The issue involves the automatic and self-managed CookieStore functionality, which can lead to one user's cookies being used for another user's requests in multi-user services. This poses a significant security risk and has been assigned a CVSS 4.0 severity score of 9.2 (CRITICAL).
 </details>
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🚨Security Fix** (KBN) [CVE-2024-21538](https://www.cve.org/CVERecord?id=CVE-2024-21538), [CVE-2024-47764](https://www.cve.org/CVERecord?id=CVE-2024-47764), [CVE-2024-52798](https://www.cve.org/CVERecord?id=CVE-2024-52798)
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**⚠️Warning** (KBN) Updated [`readonlyrest_kbn: license: activationKeyRefreshInterval`](https://forum.readonlyrest.com/t/restricting-access-to-some-spaces/2633/4) - the maximum refresh interval is now set to 1 day.
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🚀New** (ES|KBN) Introduced support for [Elastic APM (Application Performance Monitoring)](https://www.elastic.co/observability/application-performance-monitoring).
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🚀New** (KBN) 8.17.1, 8.16.3 support
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🚀New** (ES) 8.17.1, 8.16.3 support
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🚀New** (KBN) Added [Kibana images with the preinstalled ReadonlyREST plugin for the arm64 platform](https://hub.docker.com/r/beshultd/kibana-readonlyrest) on Docker Hub.
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🚀New** (ES) Added [Elasticsearch images with the preinstalled ReadonlyREST plugin for the arm64 platform](https://hub.docker.com/r/beshultd/elasticsearch-readonlyrest) on Docker Hub.
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🧐Enhancement** (ES) [Introduced validation to prevent multiple username entries in the users section.](https://forum.readonlyrest.com/t/ror-1-57-3-es-8-13-2-double-usernames-allowed/2621/2)
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (KBN) [Resolved an issue with exit patching-based commands.](https://forum.readonlyrest.com/t/restricting-access-to-some-spaces/2633/6)
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (KBN) Addressed a bug in Kibana 8.16.0 and later versions to hide the permissions tab in a space.
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (KBN) Fixed a compatibility issue where OIDC and SAML didn’t work in Kibana versions earlier than 7.11.0.
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (KBN) Ensured user settings are overridden only for the default space.
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (ES) Relaxed restrictions on snapshot restoration during index checks.
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (ES) Resolved issue with Stack Monitoring access when `xpack.security.enabled: true` is configured.
+<details>
+<summary><strong>🚨Security Fix</strong> (KBN) <a href="https://www.cve.org/CVERecord?id=CVE-2024-21538">CVE-2024-21538</a>, <a href="https://www.cve.org/CVERecord?id=CVE-2024-47764">CVE-2024-47764</a>, <a href="https://www.cve.org/CVERecord?id=CVE-2024-52798">CVE-2024-52798</a></summary>
+This entry includes security fixes for multiple vulnerabilities in Kibana, identified as CVE-2024-21538, CVE-2024-47764, and CVE-2024-52798. These vulnerabilities have been addressed to enhance the security of Kibana instances.
+</details>
+<details>
+<summary><strong>⚠️Warning</strong> (KBN) Updated <a href="https://forum.readonlyrest.com/t/restricting-access-to-some-spaces/2633/4"><code>readonlyrest_kbn: license: activationKeyRefreshInterval</code></a> - the maximum refresh interval is now set to 1 day.</summary>
+The maximum refresh interval for the `readonlyrest_kbn: license: activationKeyRefreshInterval` setting has been updated to 1 day. This change ensures that license activation keys are refreshed more frequently, enhancing security and compliance.
+</details>
+<details>
+<summary><strong>🚀New</strong> (ES|KBN) Introduced support for <a href="https://www.elastic.co/observability/application-performance-monitoring">Elastic APM (Application Performance Monitoring)</a>.</summary>
+This release introduces support for Elastic APM (Application Performance Monitoring) in both Elasticsearch and Kibana. This feature allows users to monitor and analyze the performance of their applications in real-time, providing valuable insights for optimization and troubleshooting.
+</details>
+<details>
+<summary><strong>🚀New</strong> (KBN) 8.17.1, 8.16.3 support</summary>
+This release adds support for Kibana versions 8.17.1 and 8.16.3, ensuring compatibility with the latest Kibana releases and providing users with access to new features and improvements.
+</details>
+<details>
+<summary><strong>🚀New</strong> (ES) 8.17.1, 8.16.3 support</summary>
+This release adds support for Elasticsearch versions 8.17.1 and 8.16.3, ensuring compatibility with the latest Elasticsearch releases and providing users with access to new features and improvements.
+</details>
+<details>
+<summary><strong>🚀New</strong> (KBN) Added <a href="https://hub.docker.com/r/beshultd/kibana-readonlyrest">Kibana images with the preinstalled ReadonlyREST plugin for the arm64 platform</a> on Docker Hub.</summary>
+This release introduces Kibana images with the preinstalled ReadonlyREST plugin for the arm64 platform, available on Docker Hub. This addition provides users with a convenient way to deploy Kibana with ReadonlyREST on arm64-based systems.
+</details>
+<details>
+<summary><strong>🚀New</strong> (ES) Added <a href="https://hub.docker.com/r/beshultd/elasticsearch-readonlyrest">Elasticsearch images with the preinstalled ReadonlyREST plugin for the arm64 platform</a> on Docker Hub.</summary>
+This release introduces Elasticsearch images with the preinstalled ReadonlyREST plugin for the arm64 platform, available on Docker Hub. This addition provides users with a convenient way to deploy Elasticsearch with ReadonlyREST on arm64-based systems.
+</details>
+<details>
+<summary><strong>🧐Enhancement</strong> (ES) <a href="https://forum.readonlyrest.com/t/ror-1-57-3-es-8-13-2-double-usernames-allowed/2621/2">Introduced validation to prevent multiple username entries in the users section.</a></summary>
+This enhancement introduces validation to prevent multiple username entries in the users section of the configuration. This ensures that each username is unique, reducing the risk of configuration errors and improving security.
+</details>
+<details>
+<summary><strong>🐞Fix</strong> (KBN) <a href="https://forum.readonlyrest.com/t/restricting-access-to-some-spaces/2633/6">Resolved an issue with exit patching-based commands.</a></summary>
+This fix resolves an issue with exit patching-based commands in Kibana, ensuring that these commands function correctly and improving the overall stability of the system.
+</details>
+<details>
+<summary><strong>🐞Fix</strong> (KBN) Addressed a bug in Kibana 8.16.0 and later versions to hide the permissions tab in a space.</summary>
+This fix addresses a bug in Kibana 8.16.0 and later versions that caused the permissions tab to be incorrectly displayed in a space. The fix ensures that the permissions tab is hidden as intended, improving the user experience.
+</details>
+<details>
+<summary><strong>🐞Fix</strong> (KBN) Fixed a compatibility issue where OIDC and SAML didn’t work in Kibana versions earlier than 7.11.0.</summary>
+This fix resolves a compatibility issue where OIDC and SAML authentication methods did not work in Kibana versions earlier than 7.11.0. The fix ensures that these authentication methods function correctly across all supported Kibana versions.
+</details>
+<details>
+<summary><strong>🐞Fix</strong> (KBN) Ensured user settings are overridden only for the default space.</summary>
+This fix ensures that user settings are overridden only for the default space in Kibana, preventing unintended changes to user settings in other spaces and improving the overall consistency of the system.
+</details>
+<details>
+<summary><strong>🐞Fix</strong> (ES) Relaxed restrictions on snapshot restoration during index checks.</summary>
+This fix relaxes restrictions on snapshot restoration during index checks in Elasticsearch, allowing for more flexible and efficient snapshot management and recovery processes.
+</details>
+<details>
+<summary><strong>🐞Fix</strong> (ES) Resolved issue with Stack Monitoring access when <code>xpack.security.enabled: true</code> is configured.</summary>
+This fix resolves an issue with Stack Monitoring access in Elasticsearch when `xpack.security.enabled: true` is configured. The fix ensures that Stack Monitoring functions correctly with security enabled, providing users with uninterrupted monitoring capabilities.
+</details>
 
 ### (2024-11-20) What's new in **ROR 1.61.1**
-<details>
-<summary><strong>🚨Security Fix</strong> (ES) <a href="https://forum.readonlyrest.com/t/eql-requests-returns-data-even-though-they-aren-t-allowed/2679">Data leak through the ESQL API</a> (for ES &gt;= 8.11.0)</summary>
-Sec description n shit
-</details>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🚨Security Fix** (ES) [Data leak through the ESQL API](https://forum.readonlyrest.com/t/eql-requests-returns-data-even-though-they-aren-t-allowed/2679) (for ES >= 8.11.0)
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🚨Security Fix** (KBN) [CVE-2024-21538](https://www.cve.org/CVERecord?id=CVE-2024-21538), [CVE-2024-47764](https://www.cve.org/CVERecord?id=CVE-2024-47764)
@@ -73,21 +86,18 @@ Sec description n shit
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (KBN) Elasticsearch red status shouldn't kill the Kibana process on initialization
 
 ### (2024-11-12) What's new in **ROR 1.61.0**
-<details>
-<summary><strong>🚨Security Fix</strong> (KBN) <a href="https://www.cve.org/CVERecord?id=CVE-2024-47764">CVE-2024-47764</a></summary>
-This release addresses a critical security ...f their Elasticsearch clusters. It is highly recommended for all users to update to this version to mitigate potential risks.
-</details>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🚨Security Fix** (KBN) [CVE-2024-47764](https://www.cve.org/CVERecord?id=CVE-2024-47764)
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**⚠️Warning** (KBN) Acknowledgement needs to be accepted before a Kibana patching process. For scripts, you can [set a flag](https://docs.readonlyrest.com/kibana#patching-kibana) to automate a process (edited) 
-<details>
-<summary><strong>🚀New</strong> (KBN) 8.15.4 support</summary>
-This release introduces support for Kibana version 8.15.4, ... to leverage the latest features and improvements in their Kibana deployments while ensuring compatibility with ReadOnlyRest.
-</details>
-<details>
-<summary><strong>🚀New</strong> (ES) 8.16.0, 8.15.4 support</summary>
-With this update, ReadOnlyRest now supports ... 8.16.0 and 8.15.4, enabling users to take advantage of the enhancements and functionalities offered in these versions.
-</details>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🚀New** (KBN) 8.15.4 support
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🚀New** (ES) 8.16.0, 8.15.4 support
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🚀New** (ES) There is an option to define [a custom response for users in ACL block with the 'forbid' policy](https://docs.readonlyrest.com/elasticsearch#unauthorized-response-configuration)
