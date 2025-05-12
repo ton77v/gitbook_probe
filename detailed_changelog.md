@@ -3,71 +3,71 @@
 ### (2025-03-12) What's new in **ROR 1.63.0**
 <details>
 <summary><strong>🚨Security Fix</strong> (KBN) <a href="https://www.cve.org/CVERecord?id=CVE-2025-26791">CVE-2025-26791</a>, <a href="https://cwe.mitre.org/data/definitions/772.html">CWE-772</a></summary>
-This security fix addresses a vulnerability (CVE-2025-26791) related to Kibana, which could potentially lead to resource exhaustion (CWE-772). The patch ensures improved handling of resource allocation to prevent exploitation.
+This security patch addresses a vulnerability (CVE-2025-26791) related to Kibana, classified under CWE-772 (Missing Release of Resource after Effective Lifetime). It ensures proper resource management to prevent potential exploits.
 </details>
 <details>
 <summary><strong>🚨Security Fix</strong> (ES) <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-53990">CVE-2024-57699</a> <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-25193">CVE-2025-25193</a> <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-24970">CVE-2025-24970</a></summary>
-This update resolves multiple security vulnerabilities in Elasticsearch (CVE-2024-57699, CVE-2025-25193, CVE-2025-24970), addressing issues that could lead to unauthorized access or data manipulation. The fixes enhance the overall security posture of Elasticsearch clusters.
+This update resolves multiple Elasticsearch vulnerabilities (CVE-2024-57699, CVE-2025-25193, CVE-2025-24970), enhancing security by patching potential exploits and improving system robustness.
 </details>
 <details>
 <summary><strong>🚀New</strong> (KBN) 9.0.1, 9.0.0, 9.0.0-rc1, 9.0.0-beta1, 8.18.1, 8.18.0, 8.17.6, 8.17.5, 8.17.4, 8.16.6 support</summary>
-This release extends compatibility to newer versions of Kibana, including 9.0.1, 9.0.0, and several beta/RC releases, as well as updates for older versions like 8.18.1 and 8.16.6.
+This release extends compatibility to newer versions of Kibana, including 9.0.1, 9.0.0, and several 8.x versions, ensuring seamless integration with the latest Kibana updates.
 </details>
 <details>
 <summary><strong>🚀New</strong> (ES) 9.0.1, 9.0.0, 9.0.0-rc1, 9.0.0-beta1, 8.18.1, 8.18.0, 8.17.6, 8.17.5, 8.17.4, 8.16.6 support</summary>
-The update adds support for the latest Elasticsearch versions, including 9.0.1, 9.0.0, and their pre-release variants, alongside updates for older versions such as 8.18.1 and 8.16.6.
+This update adds support for Elasticsearch versions 9.0.1, 9.0.0, and multiple 8.x releases, ensuring compatibility with the latest Elasticsearch features and improvements.
 </details>
 <details>
 <summary><strong>🚀New</strong> (ES) <a href="https://forum.readonlyrest.com/t/support-kbn-ent-managing-forbidden-messages/2623">Added <code>groups_not_any_of</code> and <code>groups_not_all_of</code> rules</a></summary>
-New group-based rules (`groups_not_any_of` and `groups_not_all_of`) have been introduced to provide finer-grained access control, allowing administrators to define more complex permission scenarios for Elasticsearch indices.
+New rules `groups_not_any_of` and `groups_not_all_of` have been introduced to provide finer-grained access control, allowing administrators to define more precise group-based restrictions.
 </details>
 <details>
 <summary><strong>🚀New</strong> (ES) <a href="https://docs.readonlyrest.com/elasticsearch#groups-rules">New unified and simplified syntax for groups rules</a></summary>
-The syntax for defining group-based rules in Elasticsearch has been unified and simplified, making it easier for administrators to configure and manage access control policies.
+The groups rules syntax has been unified and simplified, making it easier to configure and manage access control rules for Elasticsearch indices and documents.
 </details>
 <details>
 <summary><strong>🧐Enhancement</strong> (KBN) For Kibana &gt;= 8.14.0: Added backward compatibility to hide the Dashboard app by declaring Analytics|Dashboard and Analytics|Dashboards in the <code>kibana.hide_apps</code> rule</summary>
-This enhancement ensures backward compatibility for hiding the Dashboard app in Kibana versions 8.14.0 and above by supporting both 'Analytics|Dashboard' and 'Analytics|Dashboards' declarations in the `kibana.hide_apps` rule.
+This enhancement ensures backward compatibility for hiding the Dashboard app in Kibana versions 8.14.0 and above, using the `kibana.hide_apps` rule with updated syntax.
 </details>
 <details>
 <summary><strong>🧐Enhancement</strong> (KBN) Added information about skipping patching confirmation prompt to the patching helper</summary>
-The patching helper now includes additional information about skipping the confirmation prompt, streamlining the patching process for administrators.
+The patching helper now includes information on skipping confirmation prompts, streamlining the patching process for administrators.
 </details>
 <details>
 <summary><strong>🧐Enhancement</strong> (KBN) [When Kibana is opened in multiple browser tabs, logging into Kibana in one tab automatically logs in all browser tabs]</summary>
-This enhancement improves user experience by automatically synchronizing login sessions across all browser tabs when Kibana is accessed in multiple tabs simultaneously.
+This improvement ensures a seamless user experience by automatically logging in all Kibana browser tabs when authentication is performed in one tab.
 </details>
 <details>
 <summary><strong>🐞Fix</strong> (KBN) Don't terminate Kibana when disk reaches low watermark</summary>
-This fix prevents Kibana from terminating unexpectedly when the disk reaches a low watermark, ensuring uninterrupted service availability.
+This fix prevents Kibana from terminating when the disk reaches a low watermark, ensuring uninterrupted service availability.
 </details>
 <details>
 <summary><strong>🐞Fix</strong> (KBN) For Kibana &gt;= 8.15.0: Added support for reporting data stream multitenancy</summary>
-The update adds support for reporting data stream multitenancy in Kibana versions 8.15.0 and above, addressing compatibility issues with multi-tenant environments.
+This update adds support for reporting data stream multitenancy in Kibana versions 8.15.0 and above, improving functionality for multi-tenant environments.
 </details>
 <details>
 <summary><strong>🐞Fix</strong> (KBN) Silenced "Error fetching fields for index pattern" toast messages due to forbidden response in Kibana Dashboard and Discover page</summary>
-This fix suppresses unnecessary error toast messages related to forbidden responses when fetching fields for index patterns in the Kibana Dashboard and Discover pages, improving user experience.
+This fix suppresses unnecessary error messages in the Kibana Dashboard and Discover page when fetching fields for index patterns, improving user experience.
 </details>
 <details>
 <summary><strong>🐞Fix</strong> (KBN) For Kibana &gt;= 8.17.0: Fixed Elasticsearch navigation header being visible when <code>kibana.hide_apps: [ "Elasticsearch" ]</code></summary>
-The update ensures the Elasticsearch navigation header is properly hidden when the `kibana.hide_apps` rule includes "Elasticsearch", resolving a visibility issue in Kibana versions 8.17.0 and above.
+This resolves an issue where the Elasticsearch navigation header remained visible in Kibana versions 8.17.0 and above despite being hidden via the `kibana.hide_apps` rule.
 </details>
 <details>
 <summary><strong>🐞Fix</strong> (KBN) <a href="https://forum.readonlyrest.com/t/ldap-multitenancy-with-no-group-name-to-index-name-relation/2742/8">For Kibana &gt;= 8.5.0: Fixed Dev tools play buttons not being visible for RO users</a></summary>
-This fix ensures the Dev Tools play buttons are visible for read-only users in Kibana versions 8.5.0 and above, addressing a usability issue.
+This fix ensures that Dev Tools play buttons are visible for read-only users in Kibana versions 8.5.0 and above, addressing a previous visibility issue.
 </details>
 <details>
 <summary><strong>🐞Fix</strong> (KBN) Fixed an issue with hiding the dashboard app when using regular expressions in the kibana_hide_apps field</summary>
-The update resolves an issue where the dashboard app was not being hidden correctly when regular expressions were used in the `kibana_hide_apps` field.
+This resolves a bug where the dashboard app was not properly hidden when regular expressions were used in the `kibana_hide_apps` configuration.
 </details>
 <details>
 <summary><strong>🐞Fix</strong> (ES) Fixed various issues with restoring snapshot API</summary>
-This release addresses multiple issues related to the snapshot restoration API in Elasticsearch, improving reliability and functionality.
+This update addresses multiple issues related to the snapshot restoration API in Elasticsearch, ensuring smoother and more reliable operations.
 </details>
 <details>
 <summary><strong>🐞Fix</strong> (ES) Fixed data streams, index, and component templates being forbidden for RW users in stack management</summary>
-The update resolves an issue where read-write users were incorrectly denied access to data streams, index templates, and component templates in the stack management interface.
+This fix ensures that read-write users can access data streams, index, and component templates in the stack management interface, resolving a previous restriction.
 </details>
 
 ### (2025-01-24) What's new in **ROR 1.62.0**
