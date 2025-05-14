@@ -7,51 +7,66 @@ This fix addresses an issue in the Docker image entrypoint script where patching
 </details>
 
 ### (2025-05-11) What's new in **ROR 1.64.0**
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🚨Security Fix** (KBN) [CVE-2024-53382](https://nvd.nist.gov/vuln/detail/CVE-2024-53382), [CVE-2025-27789](https://nvd.nist.gov/vuln/detail/CVE-2025-27789)
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🚨Security Fix** (ES) [CVE-2023-3894](https://nvd.nist.gov/vuln/detail/CVE-2023-3894), [CVE-2025-25193](https://nvd.nist.gov/vuln/detail/CVE-2025-25193)
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**⚠️Warning** (ES) Acknowledgement needs to be accepted before the Elasticsearch patching process. For scripts, you can [set the flag](https://docs.readonlyrest.com/elasticsearch#id-3.-patch-elasticsearch) to automate the process.
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🚀New** (KBN) Added an endpoint to retrieve all user tenancies via the ReadonlyREST API. See the [ReadonlyREST API Documentation](https://api.beshu.tech/docs/swagger/master#/User's%20tenants/get_api_ror_user_tenants) for usage details.
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🚀New** (KBN) Introduced support for passing `x-ror-tenancy-id` in direct Kibana requests. See the [ReadonlyREST API Documentation](https://api.beshu.tech/docs/swagger/master#/Example%20ReadonlyREST%20headers%20usage%20with%20Kibana%20API/get_api__) for details.
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🚀New** (KBN) Introduced support for passing `x-ror-impersonating` in direct Kibana requests. See the [ReadonlyREST API Documentation](https://api.beshu.tech/docs/swagger/master#/Example%20ReadonlyREST%20headers%20usage%20with%20Kibana%20API/get_api__) for details.
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🧐Enhancement** (KBN) Retains the currently selected group information after user logout. This setting is user-configurable and disabled by default.
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🧐Enhancement** (KBN) Displays detailed "reason" messages from the ROR Elasticsearch response in the login form instead of a generic "Wrong credentials" message.
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🧐Enhancement** (KBN) Added support for passing additional [SAML](https://docs.readonlyrest.com/kibana#additional-parameters) and [OIDC](https://docs.readonlyrest.com/kibana#additional-parameters) config parameters via `kibana.yml`.
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🧐Enhancement** (KBN) Adjusted ReadonlyREST plugin UI styles for compatibility with Kibana 9.x.
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🧐Enhancement** (ES) Username duplication check in the "users" section of ROR ES settings can [be optionally disabled](https://docs.readonlyrest.com/elasticsearch#users_section_duplicate_usernames_detection).
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🧐Enhancement** (ES) Added support for [`readonlyrest.global_settings`](https://docs.readonlyrest.com/elasticsearch#global-settings) in Elasticsearch ROR settings.
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (KBN) Resolved an unhandled error when `logging.root.level` is set to `all` in `kibana.yml`.
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (KBN) Fixed an issue with retrieving username and group information in AFDS OIDC.
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (KBN) Fixed an issue with passing `x-ror-correlation-id` to the ReadonlyREST API request.
+<details>
+<summary><strong>🚨Security Fix</strong> (KBN) <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-53382">CVE-2024-53382</a>, <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-27789">CVE-2025-27789</a></summary>
+This release addresses critical security vulnerabilities CVE-2024-53382 and CVE-2025-27789 in Kibana, ensuring enhanced protection against potential exploits. Users are advised to update immediately to mitigate risks.
+</details>
+<details>
+<summary><strong>🚨Security Fix</strong> (ES) <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-3894">CVE-2023-3894</a>, <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-25193">CVE-2025-25193</a></summary>
+This update patches critical vulnerabilities CVE-2023-3894 and CVE-2025-25193 in Elasticsearch, safeguarding against potential security threats. Immediate upgrade is recommended to ensure cluster security.
+</details>
+<details>
+<summary><strong>⚠️Warning</strong> (ES) Acknowledgement needs to be accepted before the Elasticsearch patching process. For scripts, you can <a href="https://docs.readonlyrest.com/elasticsearch#id-3.-patch-elasticsearch">set the flag</a> to automate the process.</summary>
+Users must acknowledge the patching process before updating Elasticsearch. For automation, a flag can be set in scripts to bypass manual confirmation, streamlining the update workflow.
+</details>
+<details>
+<summary><strong>🚀New</strong> (KBN) Added an endpoint to retrieve all user tenancies via the ReadonlyREST API. See the <a href="https://api.beshu.tech/docs/swagger/master#/User's%20tenants/get_api_ror_user_tenants">ReadonlyREST API Documentation</a> for usage details.</summary>
+A new API endpoint has been introduced to fetch all user tenancies, simplifying tenant management. Refer to the documentation for implementation details and usage examples.
+</details>
+<details>
+<summary><strong>🚀New</strong> (KBN) Introduced support for passing <code>x-ror-tenancy-id</code> in direct Kibana requests. See the <a href="https://api.beshu.tech/docs/swagger/master#/Example%20ReadonlyREST%20headers%20usage%20with%20Kibana%20API/get_api__">ReadonlyREST API Documentation</a> for details.</summary>
+Direct Kibana requests now support the `x-ror-tenancy-id` header, enabling seamless tenancy management. Check the documentation for header usage guidelines.
+</details>
+<details>
+<summary><strong>🚀New</strong> (KBN) Introduced support for passing <code>x-ror-impersonating</code> in direct Kibana requests. See the <a href="https://api.beshu.tech/docs/swagger/master#/Example%20ReadonlyREST%20headers%20usage%20with%20Kibana%20API/get_api__">ReadonlyREST API Documentation</a> for details.</summary>
+The `x-ror-impersonating` header is now supported in direct Kibana requests, facilitating user impersonation for debugging or administrative purposes. Documentation provides detailed usage instructions.
+</details>
+<details>
+<summary><strong>🧐Enhancement</strong> (KBN) Retains the currently selected group information after user logout. This setting is user-configurable and disabled by default.</summary>
+The selected group information is now retained post-logout, improving user experience. This feature is optional and can be enabled in settings.
+</details>
+<details>
+<summary><strong>🧐Enhancement</strong> (KBN) Displays detailed "reason" messages from the ROR Elasticsearch response in the login form instead of a generic "Wrong credentials" message.</summary>
+Login forms now show specific error messages from ROR Elasticsearch responses, aiding in troubleshooting authentication issues.
+</details>
+<details>
+<summary><strong>🧐Enhancement</strong> (KBN) Added support for passing additional <a href="https://docs.readonlyrest.com/kibana#additional-parameters">SAML</a> and <a href="https://docs.readonlyrest.com/kibana#additional-parameters">OIDC</a> config parameters via <code>kibana.yml</code>.</summary>
+Additional SAML and OIDC configuration parameters can now be passed through `kibana.yml`, offering greater flexibility in authentication setups.
+</details>
+<details>
+<summary><strong>🧐Enhancement</strong> (KBN) Adjusted ReadonlyREST plugin UI styles for compatibility with Kibana 9.x.</summary>
+The plugin's UI has been updated to ensure seamless compatibility with Kibana 9.x, maintaining a consistent user experience.
+</details>
+<details>
+<summary><strong>🧐Enhancement</strong> (ES) Username duplication check in the "users" section of ROR ES settings can <a href="https://docs.readonlyrest.com/elasticsearch#users_section_duplicate_usernames_detection">be optionally disabled</a>.</summary>
+The username duplication check in ROR Elasticsearch settings can now be disabled, providing flexibility for specific use cases.
+</details>
+<details>
+<summary><strong>🧐Enhancement</strong> (ES) Added support for <a href="https://docs.readonlyrest.com/elasticsearch#global-settings"><code>readonlyrest.global_settings</code></a> in Elasticsearch ROR settings.</summary>
+Global settings can now be configured via `readonlyrest.global_settings`, centralizing configuration management for Elasticsearch ROR.
+</details>
+<details>
+<summary><strong>🐞Fix</strong> (KBN) Resolved an unhandled error when <code>logging.root.level</code> is set to <code>all</code> in <code>kibana.yml</code>.</summary>
+A bug causing unhandled errors with `logging.root.level` set to `all` in `kibana.yml` has been fixed, ensuring stable logging behavior.
+</details>
+<details>
+<summary><strong>🐞Fix</strong> (KBN) Fixed an issue with retrieving username and group information in AFDS OIDC.</summary>
+An issue preventing the retrieval of username and group information in AFDS OIDC has been resolved, restoring proper functionality.
+</details>
+<details>
+<summary><strong>🐞Fix</strong> (KBN) Fixed an issue with passing <code>x-ror-correlation-id</code> to the ReadonlyREST API request.</summary>
+A bug affecting the `x-ror-correlation-id` header in API requests has been fixed, ensuring reliable request tracking.
+</details>
 * **🧐Enhancement** (KBN)  
 Added support for passing additional [SAML](https://docs.readonlyrest.com/kibana#additional-parameters) and [OIDC](https://docs.readonlyrest.com/kibana#additional-parameters) config parameters via `kibana.yml`.
 * **🧐Enhancement** (KBN)  
