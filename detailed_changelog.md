@@ -1350,7 +1350,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 ### (2021-01-02) What's new in **ROR 1.26.0**
 
-### (2021-01-02) What's new in **ROR 1.26.0**
 
 * **🚨Security Fix** \(ES\) [CVE-2020-35490](https://nvd.nist.gov/vuln/detail/CVE-2020-35490) & [CVE-2020-35490](https://nvd.nist.gov/vuln/detail/CVE-2020-35491) \(removed Jackson dependency from ROR core\)
 * **🚀New** \(ES\) [New response\_fields rule](https://forum.readonlyrest.com/t/ror-1-18-9-enterprise-es-7-2-0-enable-cluster-health-without-authentication/1567)
