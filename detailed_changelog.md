@@ -5,13 +5,11 @@
 <summary><strong>🐞Fix</strong> (ES) <a href="https://forum.readonlyrest.com/t/ror-1-64-0-for-es9-0-1-windows-setup/2778">Fixed an issue with Elasticsearch patching process on Windows operating systems</a></summary>
 This fix resolves a patching failure issue encountered during the installation of ROR 1.64.0 on Elasticsearch 9.0.1 and 8.18.0 for Windows. The problem was addressed in the official release of ROR 1.64.2, ensuring compatibility with both Elasticsearch versions.
 </details>
-
 ### (2025-05-13) What's new in **ROR 1.64.1**
 <details>
 <summary><strong>🐞Fix</strong> (ES) Correct patching verification in ROR Docker image entrypoint</summary>
 This fix addresses an issue in the Docker image entrypoint script where patching verification was not correctly implemented. The update ensures that the verification process now works as intended, preventing potential misconfigurations during deployment.
 </details>
-
 ### (2025-05-11) What's new in **ROR 1.64.0**
 <details>
 <summary><strong>🚨Security Fix</strong> (KBN) <a href="https://nvd.nist.gov/vuln/detail/CVE-2024-53382">CVE-2024-53382</a>, <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-27789">CVE-2025-27789</a>, <a href="https://www.cve.org/CVERecord?id=CVE-2025-29774">CVE-2025-29774</a></summary>
@@ -73,21 +71,6 @@ An issue preventing the retrieval of username and group information in AFDS OIDC
 <summary><strong>🐞Fix</strong> (KBN) Fixed an issue with passing <code>x-ror-correlation-id</code> to the ReadonlyREST API request.</summary>
 A bug affecting the `x-ror-correlation-id` header in API requests has been fixed, ensuring reliable request tracking.
 </details>
-* **🧐Enhancement** (KBN)  
-Added support for passing additional [SAML](https://docs.readonlyrest.com/kibana#additional-parameters) and [OIDC](https://docs.readonlyrest.com/kibana#additional-parameters) config parameters via `kibana.yml`.
-* **🧐Enhancement** (KBN)  
-Adjusted ReadonlyREST plugin UI styles for compatibility with Kibana 9.x.
-* **🧐Enhancement** (ES)  
-Username duplication check in the "users" section of ROR ES settings can [be optionally disabled](https://docs.readonlyrest.com/elasticsearch#users_section_duplicate_usernames_detection).
-* **🧐Enhancement** (ES)  
-Added support for [`readonlyrest.global_settings`](https://docs.readonlyrest.com/elasticsearch#global-settings) in Elasticsearch ROR settings.
-* **🐞Fix** (KBN)  
-Resolved an unhandled error when `logging.root.level` is set to `all` in `kibana.yml`.
-* **🐞Fix** (KBN)  
-Fixed an issue with retrieving username and group information in AFDS OIDC.
-* **🐞Fix** (KBN)  
-Fixed an issue with passing `x-ror-correlation-id` to the ReadonlyREST API request.
-
 ### (2025-03-12) What's new in **ROR 1.63.0**
 <details>
 <summary><strong>🚨Security Fix</strong> (KBN) <a href="https://www.cve.org/CVERecord?id=CVE-2025-26791">CVE-2025-26791</a>, <a href="https://cwe.mitre.org/data/definitions/772.html">CWE-772</a></summary>
@@ -157,7 +140,6 @@ This update addresses multiple issues related to the snapshot restoration API in
 <summary><strong>🐞Fix</strong> (ES) Fixed data streams, index, and component templates being forbidden for RW users in stack management</summary>
 This fix ensures that read-write users can access data streams, index, and component templates in the stack management interface, resolving a previous restriction.
 </details>
-
 ### (2025-01-24) What's new in **ROR 1.62.0**
 
 
@@ -204,7 +186,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (ES) Resolved issue with Stack Monitoring access when `xpack.security.enabled: true` is configured.
-
 ### (2024-11-20) What's new in **ROR 1.61.1**
 
 
@@ -227,7 +208,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (KBN) Elasticsearch red status shouldn't kill the Kibana process on initialization
-
 ### (2024-11-12) What's new in **ROR 1.61.0**
 
 
@@ -283,7 +263,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (ES) Snapshot API - misc issues for ES 6.x
-
 ### (2024-09-15) What's new in **ROR 1.60.0**
 
 
@@ -321,7 +300,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (ES) [Fix for the problem with remote access to data stream aliases](https://forum.readonlyrest.com/t/requested-index-doesnt-exist/2573)
-
 ### (2024-08-01) What's new in **ROR 1.59.0**
 
 
@@ -344,7 +322,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (ES) for the problem with `_async_search` on ES 8.14.x
-
 ### (2024-06-30) What's new in **ROR 1.58.0**
 
 
@@ -379,7 +356,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (KBN) Fix problem with multi-tenancy features when xpack.security.enabled: true
-
 ### (2024-05-18) What's new in **ROR 1.57.3**
 
 
@@ -396,7 +372,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (KBN) Automatic migration issue for Kibana >= 8.8.0 that caused the "mapping set to strict, dynamic introduction of... error
-
 ### (2024-05-05) What's new in **ROR 1.57.2**
 
 
@@ -416,12 +391,10 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (ES) Patching issue for Elasticsearch OSS versions
-
 ### (2024-04-29) What's new in **ROR 1.57.1**
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (ES) configuration parsing regression: one group definition can be a string
-
 ### (2024-04-28) What's new in **ROR 1.57.0**
 
 
@@ -474,7 +447,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (ES) Patched files permission issue
-
 ### (2024-03-15) What's new in **ROR 1.56.0**
 
 
@@ -521,7 +493,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (ES) `application/nd-json` media type handling (in case of ES `7.x` versions)
-
 ### (2024-01-29) What's new in **ROR 1.55.0**
 
 
@@ -550,7 +521,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (ES) Logout when a user with restricted `kibana.access` tried to see a restoration status of snapshots in Kibana
-
 ### (2023-12-17) What's new in **ROR 1.54.0**
 
 
@@ -576,7 +546,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (ES) ["missing authorization info" problem in some situations when `xpack.security.enabled` was configured to be `true`](https://forum.readonlyrest.com/t/diana-eck/2298/75)
-
 ### (2023-11-20) What's new in **ROR 1.53.0**
 
 
@@ -611,7 +580,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (ES) [patching fix, when a non-default ES path is used (e.g. on K8s)](https://forum.readonlyrest.com/t/getting-java-lang-illegalargumentexception-when-initializing-ror-in-es-8-10-4/2441)
-
 ### (2023-10-09) What's new in **ROR 1.52.0**
 
 
@@ -646,7 +614,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (KBN) Problem with logging in when multi-tenancy is enabled and the `indices` rule is defined in the ROR settings
-
 ### (2023-09-25) What's new in **ROR 1.51.1**
 
 
@@ -666,7 +633,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (ES) LDAP connectivity improvements
-
 ### (2023-09-10) What's new in **ROR 1.51.0**
 
 
@@ -704,7 +670,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (ES) stack-management screen fix in case of `xpack.security.enabled: true`
-
 ### (2023-07-25) What's new in **ROR 1.50.0**
 
 
@@ -727,7 +692,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🧐Enhancement** (KBN) Provide information about granted/rejected log-in users to debug logs
-
 ### (2023-06-27) What's new in **ROR 1.49.1**
 
 
@@ -753,7 +717,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (ES) [kibana access `rw` and `admin` should allow to manage component templates](https://forum.readonlyrest.com/t/forbidden-for-creating-component-templates/2372)
-
 ### (2023-05-28) What's new in **ROR 1.49.0**
 
 
@@ -785,7 +748,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (ES) resolving ENVs to YAML number in ROR settings
-
 ### (2023-04-15) What's new in **ROR 1.48.0**
 
 
@@ -850,7 +812,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (KBN < 7.9.x) using a custom kibana index in cooperation with ROR Free
-
 ### (2023-02-13) What's new in **ROR 1.47.0**
 
 
@@ -885,7 +846,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (ES) NPE when `_search` with aggregations (script) and the `fields` rule were used together
-
 ### (2023-01-02) What's new in **ROR 1.46.0**
 
 
@@ -920,7 +880,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (ES) large report generation using data from a remote cluster with enabled x-pack security
-
 ### (2022-12-05) What's new in **ROR 1.45.1**
 
 
@@ -931,7 +890,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (KBN) ROR KBN patching script
-
 ### (2022-11-29) What's new in **ROR 1.45.0**
 
 
@@ -984,7 +942,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (ES) resolving index names with wildcards should take into consideration the current index state and request indices options
-
 ### (2022-10-09) What's new in **ROR 1.44.0**
 
 
@@ -1025,7 +982,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (ES) SNI handling (internode SSL)
-
 ### (2022-08-22) What's new in **ROR 1.43.0**
 
 
@@ -1054,7 +1010,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (KBN) 404 on login when `xpack.spaces.enabled: false`
-
 ### (2022-07-25) What's new in **ROR 1.42.0**
 
 
@@ -1074,7 +1029,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (ES) ROR node cooperation with X-pack nodes
-
 ### (2022-06-21) What's new in **ROR 1.41.0**
 
 
@@ -1100,7 +1054,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (KBN) OIDC connector not working in Kibana < 7.12.0
-
 ### (2022-05-24) What's new in **ROR 1.40.0**
 
 
@@ -1150,7 +1103,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (KBN) OIDC connection error
-
 ### (2022-03-19) What's new in **ROR 1.39.0**
 
 
@@ -1203,7 +1155,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (ES) _msearch issue when filter rules was used in matched block
-
 ### (2022-01-17) What's new in **ROR 1.38.0**
 
 
@@ -1220,7 +1171,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (KBN) Editor rendering issue with kibana basePath enabled
-
 ### (2021-12-14) What's new in **ROR 1.37.0**
 
 
@@ -1243,7 +1193,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (KBN) More robust Kibana patcher + better logs messages
-
 ### (2021-11-21) What's new in **ROR 1.36.0**
 
 
@@ -1290,7 +1239,6 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (KBN) Kibana < 7.8.x broken `clearSessionOnEvents: [tenancyHop]`
-
 ### (2021-10-17) What's new in **ROR 1.35.1**
 
 
@@ -1316,168 +1264,39 @@ This fix ensures that read-write users can access data streams, index, and compo
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (KBN) More alerting fixes (only for main tenancy)
-
 ### (2021-10-12) What's new in **ROR 1.35.0**
-
-
-* **🚀New** (KBN) Support Kibana 7.15.0, 7.14.2
-* **🚀New** (ES) New Support for 7.15.1, 6.8.19, 6.8.20
-* **🧐Enhancement** (ES) [local->external groups detailed mapping for groups rule](https://github.com/beshu-tech/readonlyrest-docs/blob/master/details/groups-rule-mapping.md)
-* **🧐Enhancement** (ES) when ROR is starting any request is going to end up with HTTP 403 response, instead of HTTP 503
-* **🧐Enhancement** (KBN) "server.basePath" kibana option implementation
-* **🧐Enhancement** (KBN) Support full regex in kibana_hidden_apps rule
-* **🧐Enhancement** Crash if Kibana is not patched
-* **🧐Enhancement** (KBN) Honour kibana setting "logging.dest"
-* **🧐Enhancement** (KBN) Confirm before overwriting audit log dashboard
-* **🐞Fix** (ES) verbosity: error fix in case of ROR KBN login request
-* **🐞Fix** (KBN) Make alerting work on primary tenancy
-* **🐞Fix** (KBN) OIDC fix sameSite / secure cookie options
-* **🐞Fix** (KBN) Login form is stretched when long error
-* **🐞Fix** (KBN) Login form is stretched when long error
-* **🐞Fix** (KBN-PRO) [Don't send x-ror-currentgroup in PRO](https://forum.readonlyrest.com/t/upgrading-6-7-w-1-18-to-7-14-w-1-33-ldap-from-ms-active-directory-no-longer-understands-multiple-ad-group-memberships/1973/6)
-* **🐞Fix** (KBN) Resolve browser console errors on a popover close
 
 ### (2021-09-24) What's new in **ROR 1.34.0**
 
-
-* **🚀New** (ES) New Support for 7.15.0, 7.14.2
-* **🚀New** (KBN) VS Code style YAML editor
-* **🚀New** (KBN) Skip rendering hidden app groups entirely
-* **🚀New** (KBN) Redesigned ROR Menu
-* **🚀New** (KBN) Dark theme awareness
-* **🐞Fix** (KBN) Broken Kibana Spaces
-* **🐞Fix** (KBN) Support Kibana's undocumented "server.ssl.*" settings
-* **🐞Fix** (KBN) cookiePass config parsing broke load balancing
-
 ### (2021-08-14) What's new in **ROR 1.33.1**
-
-
-* **🚀New** (ES) New Support for 7.14.1
-* **🐞Fix** (KBN) Error in patching for 7.14.0
-* **🐞Fix** (KBN) clearSessionOnEvents now works as expected
-* **🐞Fix** (KBN) login form font loads correctly
 
 ### (2021-08-09) What's new in **ROR 1.33.0**
 
-
-* **🚨Security Fix** (KBN) xml-crypto dependency update
-* **🚀New** (KBN) New Support for 7.14.0, 6.8.18
-* **🧐Enhancement** (KBN) Parse credentials in /api/* requests, no need for valid cookie. Supersedes whitelistedPaths
-* **🐞Fix** (KBN)Caching issues switching tenancies with dark/light theme
-* **🐞Fix** (KBN) Newly created Space shows in all tenancies when using default kibana index
-* **🐞Fix** \(KBN &lt; 7.9.x\) nextUrl works again with SAML and OIDC
-
 ### (2021-07-25) What's new in **ROR 1.32.0**
 
-
-* **🚨Security Fix** (ES) [Apache Commons Codec vulnerability](https://forum.readonlyrest.com/t/security-vulnerability-for-common-codec-1-10/1906)
-* **🚨Security Fix** (KBN) upgraded dependencies due to security fixes
-* **🚨Security Fix** (KBN) disable x-powered-by to avoid fingerprinting
-* **🚀New** (ES) Support for ES 7.14.0 & 6.8.18
-* **🚀New** (KBN) Support for Kibana 7.13.x series
-* **🧐Enhancement** (KBN) honor configurations coming from ENV and CLI options
-* **🧐Enhancement** (KBN) when metadata has no username, login must be denied
-* **🧐Enhancement** (KBN) audit tab ported to new platform
-* **🧐Enhancement** (ES) improved ES resources cleaning when ROR returns FORBIDDEN response
-* **🧐Enhancement** \(KBN &lt; 7.9.x\) auto clean-up dangling SAML/OIDC cookies
-* **🐞Fix** (ES) [incomplete response for request GET */_alias](https://forum.readonlyrest.com/t/ror-return-incomplete-response-for-request-get-alias/1872)
-* **🐞Fix** (ES) not allowed aliases should not present in a response for a Get Index API request
-* **🐞Fix** (KBN) fix dev-tools and import saved object not working
-* **🐞Fix** (KBN) honor `requestHeadersWhitelist` in user metadata request (login)
-* **🐞Fix** \(KBN &lt; 7.9.x\) do not crash on invalid metadata
- 
 ### (2021-06-29) What's new in **ROR 1.31.0**
-
-
-* **🚨Security Fix** (KBN) prevent direct navigation to hidden apps
-* **🚀New** (ES) 7.13.4, 7.13.3, 7.13.2, 6.8.17 support
-* **🚀New** (KBN) new minimal Kibana Management menu when "Management" app is hidden
-* **🧐Enhancement** (KBN) logout active Kibana session if key metadata/permissions change in ACL
-* **🧐Enhancement** (KBN) better port number validation
-* **🧐Enhancement** (ES) improved cluster indices handling
-* **🐞Fix** (ES) [Kibana access rule regression fix](https://forum.readonlyrest.com/t/es7-11-2-1-30-0-enterprise-two-contexts-rw-ro-issue/1855)
-* **🐞Fix** (ES) search template API handling with `filter` and `fields` rule
-* **🐞Fix** (ES) multi-tenancy issue when groups_provider_authorization is used
-* **🐞Fix** (ES) `x_forwarded_for` rule: wrong handling of / request
-* **🐞Fix** (ES) Issue with handling ResizeRequest which made it unable to upgrade Kibana to version 7.12.0+
-* **🐞Fix** (KBN) some Kibana requests arrive to ES without credentials
-* **🐞Fix** (KBN) inconsistent read after write in session storage lead to issues with round robin load balancing
-* **🐞Fix** (KBN) bad multipart POST handling leads to saved object import errors
 
 ### (2021-05-26) What's new in **ROR 1.30.1**
 
-
-* **🚨Security Fix** \(ES\) [CVE-2021-27568](https://nvd.nist.gov/vuln/detail/CVE-2021-27568)
-* **🚀New** \(ES\) 7.13.0, 7.13.1 support
-* **🐞Fix** \(ES\) Regression in multi-tenancy handling
-* **🐞Fix** \(ES\) Proper handling of \_snapshot/\_status endpoint
-
 ### (2021-05-16) What's new in **ROR 1.30.0**
-
-
-* **🚀New** \(KBN\) 7.12.x compatibility
-* **🚀New** \(ES\) [LDAP connector circuit breaker](https://github.com/beshu-tech/readonlyrest-docs/blob/v1.30.x/elasticsearch.md#circuit-breaker)
-* **🧐Enhancement** \(ES\) [Username with wildcard support in users section](https://github.com/beshu-tech/readonlyrest-docs/blob/v1.30.x/elasticsearch.md#groups) and [groups mapping](https://github.com/beshu-tech/readonlyrest-docs/blob/v1.30.x/elasticsearch.md#group-mapping)
-* **🧐Enhancement** \(KBN &lt; 7.9.x\) OIDC errors visibility
-* **🧐Enhancement** \(KBN &lt; 7.9.x\) Smarter session probe algorithm
-* **🐞Fix** \(KBN &gt;= 7.9.x\) [Load CertificateAuthorities as an array if not specified as an array](https://forum.readonlyrest.com/t/kibana-crash-at-startup-with-the-new-7-10-2-version/1840)
-* **🐞Fix** \(KBN &lt; 7.9.x\) Don't hide visualizations list search box in RO mode
 
 ### (2021-04-09) What's new in **ROR 1.29.0**
 
-
-* **🚨Security Fix** \(ES\) Security Fix \(ES\) [CVE-2021-21409](https://nvd.nist.gov/vuln/detail/CVE-2021-21409)
-* **🚀New** \(KBN\) support 7.9.0, 7.9.1, 7.10.0, 7.10.1, 7.10.2, 7.11.0, 7.11.1, 7.11.2 \([with ROR new platform](https://beta.readonlyrest.com/)\) 
-* **🚀New** \(ES\) 7.12.1 support 
-* **🧐Enhancement** \(KBN\) logout if the credentials/metadata of the current user change in the ACL
-
 ### (2021-04-01) What's new in **ROR 1.28.2**
-
-
-* **🚨Security Fix** \(ES\) [CVE-2021-21295](https://nvd.nist.gov/vuln/detail/CVE-2021-21295)
-* **🐞Fix** \(KBN\) prevent SAML/OIDC initiated Kibana sessions from expiring after `session_timeout_minutes` despite continued interaction
 
 ### (2021-03-24) What's new in **ROR 1.28.1**
 
-
-* **🐞Fix** \(ES\) Getting index templates issue when no `indices` rule was used in matched block
-* **🐞Fix** \(ES\) [NPE on getting template aliases](https://forum.readonlyrest.com/t/cannot-put-index-template-template-1/1681/25)
-
 ### (2021-03-14) What's new in **ROR 1.28.0**
-
-
-* **🚀New** \(ES\) 7.12.0, 7.11.2 support 
-* **🚀New** \(ES\) full [Index and Component Templates API](https://www.elastic.co/guide/en/elasticsearch/reference/7.9/index-templates.html) support 
-* **🧐Enhancement** \(ES\) [Username case sensitivity settings](https://forum.readonlyrest.com/t/ldap-based-user-authentication/1667)
-* **🐞Fix** \(ES\) [Kibana logout event storing fix](https://forum.readonlyrest.com/t/kibana-plugin-software-licensing-and-expiration/1808/5)
-* **🐞Fix** \(ES\) [Fixed remote reindex operation with "type" parameter](https://forum.readonlyrest.com/t/reindex-index-not-found-exception/1708/20)
-* **🐞Fix** \(KBN\) Prevent cookie expiration deadlock in browsers when using SAML/OIDC
-* **🐞Fix** \(KBN\) When credentials change in the ACL, make it possible to login again
-* **🐞Fix** \(KBN\) Kibana management app ID changed from "kibana:management" to "kibana:stack\_management"
 
 ### (2021-02-27) What's new in **ROR 1.27.1**
 
-
-* **🚨Security Fix** \(ES\) [CVE-2021-21290](https://nvd.nist.gov/vuln/detail/CVE-2021-21290)
-* **🚀New** \(ES\) 7.11.1 support 
-
 ### (2021-02-16) What's new in **ROR 1.27.0**
-
-
-* **🚀New** \(ES\) 7.11.0, 7.10.2, 6.8.14 support
-* **🧐Enhancement** \(KBN\) X-Forwarded-For copied from incoming request \(or filled with source IP\) before forwarding to ES
-* **🧐Enhancement** \(KBN\) Kibana logout event generates a special audit log entry in ROR audit logs index
-* **🧐Enhancement** \(KBN\) ROR panel shows "reports" button if kibana:management app is hidden
-* **🐞Fix** \(ES\) [blocks containing filter and/or fields won't match internal kibana requests, so kibana\_\* rules won't have to be placed in such blocks](https://github.com/beshu-tech/readonlyrest-docs/blob/master/elasticsearch.md#fields)
-* **🐞Fix** \(ES\) SQL API - better handling of invalid query
 
 ### (2021-01-11) What's new in **ROR 1.26.1**
 
-
-* **🐞Fix** \(ES\) wrong behaviour of `kibana_access` rule for ROR actions when ADMIN value is set
-
 ### (2021-01-02) What's new in **ROR 1.26.0**
 
+### (2021-01-02) What's new in **ROR 1.26.0**
 
 * **🚨Security Fix** \(ES\) [CVE-2020-35490](https://nvd.nist.gov/vuln/detail/CVE-2020-35490) & [CVE-2020-35490](https://nvd.nist.gov/vuln/detail/CVE-2020-35491) \(removed Jackson dependency from ROR core\)
 * **🚀New** \(ES\) [New response\_fields rule](https://forum.readonlyrest.com/t/ror-1-18-9-enterprise-es-7-2-0-enable-cluster-health-without-authentication/1567)
