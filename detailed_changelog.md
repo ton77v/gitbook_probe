@@ -1,11 +1,5 @@
 # Changelog
 
-### (2025-05-17) What's new in **ROR 1.64.2**
-<details>
-<summary><strong>🐞Fix</strong> (ES) <a href="https://forum.readonlyrest.com/t/ror-1-64-0-for-es9-0-1-windows-setup/2778">Fixed an issue with Elasticsearch patching process on Windows operating systems</a></summary>
-This fix resolves a patching failure issue encountered during the installation of ROR 1.64.0 on Elasticsearch 9.0.1 and 8.18.0 for Windows. The problem was addressed in the official release of ROR 1.64.2, ensuring compatibility with both Elasticsearch versions.
-</details>
-
 ### (2025-05-13) What's new in **ROR 1.64.1**
 <details>
 <summary><strong>🐞Fix</strong> (ES) Correct patching verification in ROR Docker image entrypoint</summary>
