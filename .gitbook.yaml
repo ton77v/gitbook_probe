@@ -1,0 +1,3 @@
+root: ./
+redirect:
+  changelog: detailed_changelog.md
