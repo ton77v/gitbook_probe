@@ -2,8 +2,16 @@
 
 ### (2025-05-17) What's new in **ROR 1.64.2**
 <details>
+<summary><strong>🚀New</strong> (KBN) 9.0.2, 8.18.2, 8.17.7 support</summary>
+This update adds support for Kibana versions 9.0.2, 8.18.2, and 8.17.7, ensuring compatibility with the latest Kibana releases.
+</details>
+<details>
+<summary><strong>🚀New</strong> (ES) 9.0.2, 8.18.2, 8.17.7 support</summary>
+This update extends compatibility to Elasticsearch versions 9.0.2, 8.18.2, and 8.17.7, allowing users to leverage the latest Elasticsearch features and fixes.
+</details>
+<details>
 <summary><strong>🐞Fix</strong> (ES) <a href="https://forum.readonlyrest.com/t/ror-1-64-0-for-es9-0-1-windows-setup/2778">Fixed an issue with Elasticsearch patching process on Windows operating systems</a></summary>
-This fix resolves a patching failure issue encountered during the installation of ROR 1.64.0 on Elasticsearch 9.0.1 and 8.18.0 for Windows. The problem was addressed in the official release of ROR 1.64.2, ensuring compatibility with both Elasticsearch versions.
+Resolves a bug in the Elasticsearch patching process specific to Windows systems, ensuring smoother updates and installations for Windows users.
 </details>
 
 ### (2025-05-13) What's new in **ROR 1.64.1**
