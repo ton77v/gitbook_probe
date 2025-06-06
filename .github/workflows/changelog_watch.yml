@@ -17,7 +17,14 @@ jobs:
       - name: Get changelog diff
         id: changelog
         run: |
-          DIFF=$(git diff HEAD^ HEAD -- changelog.md)
+          git fetch --deepen=1
+          PREV_COMMIT=$(git rev-parse HEAD~1 || echo "")
+          if [ -z "$PREV_COMMIT" ]; then
+            DIFF=$(cat changelog.md)
+          else
+            DIFF=$(git diff "$PREV_COMMIT" HEAD -- changelog.md)
+          fi
+          
           echo "DIFF<<EOF" >> $GITHUB_ENV
           echo "$DIFF" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
