@@ -1,6 +1,7 @@
 # Changelog
 
 ### (2025-05-17) What's new in **ROR 1.64.2**
+* **🚀New** (KBN) 9.0.2, 8.18.2, 8.17.7 support
 * **🚀New** (ES) 9.0.2, 8.18.2, 8.17.7 support
 
 ### (2025-01-24) What's new in **ROR 1.62.0**
