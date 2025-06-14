@@ -7,11 +7,11 @@ This update adds support for Kibana versions 9.0.2, 8.18.2, and 8.17.7, ensuring
 </details>
 <details>
 <summary><strong>🚀New</strong> (ES) 9.0.2, 8.18.2, 8.17.7 support</summary>
-This update extends support to Elasticsearch versions 9.0.2, 8.18.2, and 8.17.7, allowing users to secure their clusters with ROR on these versions.
+This release introduces compatibility with Elasticsearch versions 9.0.2, 8.18.2, and 8.17.7, enabling secure cluster management on these builds.
 </details>
 <details>
 <summary><strong>🐞Fix</strong> (ES) <a href="https://forum.readonlyrest.com/t/ror-1-64-0-for-es9-0-1-windows-setup/2778">Fixed an issue with Elasticsearch patching process on Windows operating systems</a></summary>
-Resolves an issue during Elasticsearch patching on Windows, ensuring smoother installation and updates for Windows users.
+Resolved a bug affecting the Elasticsearch patching process on Windows, ensuring smoother installation and updates.
 </details>
 
 ### (2025-05-13) What's new in **ROR 1.64.1**
