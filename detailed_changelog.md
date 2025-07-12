@@ -1,8 +1,84 @@
 # Changelog
 
-* **🚀New** (KBN) 9.0.2, 8.18.2, 8.17.7 support
-* **🚀New** (ES) 9.0.2, 8.18.2, 8.17.7 support
-* **🐞Fix** (ES) [Fixed an issue with Elasticsearch patching process on Windows operating systems](https://forum.readonlyrest.com/t/ror-1-64-0-for-es9-0-1-windows-setup/2778)
+### (2025-07-10) What's new in **ROR 1.65.0**
+<details>
+<summary><strong>🚨Security Fix</strong> (KBN) <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5889">CVE-2025-5889</a></summary>
+This security fix addresses a vulnerability (CVE-2025-5889) in Kibana, ensuring enhanced protection against potential exploits. Users are advised to update immediately to mitigate risks.
+</details>
+<details>
+<summary><strong>🚨Security Fix</strong> (ES) <a href="https://nvd.nist.gov/vuln/detail/cve-2024-29857">CVE-2024-29857</a> (when FIPS SSL is used)</summary>
+This update resolves a security issue (CVE-2024-29857) in Elasticsearch when FIPS SSL is enabled, preventing potential vulnerabilities in secure communication channels.
+</details>
+<details>
+<summary><strong>🚀New</strong> (KBN)  Added support for configuring <a href="https://www.elastic.co/docs/troubleshoot/kibana/using-kibana-server-logs">JSON log format</a> in <code>kibana.yml</code>.</summary>
+Users can now configure Kibana logs in JSON format via `kibana.yml`, improving log readability and integration with log management tools.
+</details>
+<details>
+<summary><strong>🚀New</strong> (ES) <a href="https://docs.readonlyrest.com/elasticsearch/audit#configuration">Added support for a new output type: <code>data_stream</code> in audit logging</a>.</summary>
+Elasticsearch audit logging now supports `data_stream` as an output type, enabling more flexible and scalable log management solutions.
+</details>
+<details>
+<summary><strong>🚀New</strong> (ES) Included Elasticsearch node name and cluster name in the audit reports.</summary>
+Audit reports now include the Elasticsearch node name and cluster name, providing better context for log analysis and troubleshooting.
+</details>
+<details>
+<summary><strong>🧐Enhancement</strong> (KBN) Logged detailed messages when the CSRF token has expired.</summary>
+Kibana now logs detailed messages when a CSRF token expires, aiding in debugging and improving user experience during session management.
+</details>
+<details>
+<summary><strong>🧐Enhancement</strong> (KBN) <a href="https://docs.readonlyrest.com/kibana#user-info-source-methods">Added <code>id_token</code> as a valid option for <code>userInfoSource</code></a>.</summary>
+The `id_token` is now a valid option for `userInfoSource` in Kibana, expanding authentication flexibility for OIDC and other identity providers.
+</details>
+<details>
+<summary><strong>🧐Enhancement</strong> (ES) Improved handling of JVM properties related to ROR settings.</summary>
+This enhancement optimizes the handling of JVM properties tied to ROR configurations, ensuring smoother performance and stability.
+</details>
+<details>
+<summary><strong>🐞Fix</strong> (KBN) Fixed OIDC logout redirection issue by switching <code>redirect_uri</code> to <code>id_token_hint</code> and using <code>post_logout_redirect_uri</code>.</summary>
+Resolved an OIDC logout redirection issue by replacing `redirect_uri` with `id_token_hint` and utilizing `post_logout_redirect_uri` for seamless logout flows.
+</details>
+<details>
+<summary><strong>🐞Fix</strong> (KBN) The ReadonlyREST Kibana plugin now accepts custom appender names defined in <code>kibana.yml</code>.</summary>
+The plugin now correctly processes custom appender names specified in `kibana.yml`, ensuring log configurations are applied as intended.
+</details>
+<details>
+<summary><strong>🐞Fix</strong> (KBN) When "Remember Group After Logout" is enabled, groups without access are correctly ignored during login.</summary>
+Fixed an issue where groups without access were not ignored during login when "Remember Group After Logout" was enabled, improving security and user experience.
+</details>
+<details>
+<summary><strong>🐞Fix</strong> (KBN) Fixed issue where the Kibana index template was not applied for Kibana versions ≥ 8.8.0.</summary>
+Resolved a bug preventing the Kibana index template from being applied in versions 8.8.0 and above, ensuring proper index management.
+</details>
+<details>
+<summary><strong>🐞Fix</strong> (KBN) Resolved a bug with <code>readonlyrest_kbn.resetKibanaIndexToTemplate: true</code> for Kibana 7.x.</summary>
+Fixed an issue where the `resetKibanaIndexToTemplate` setting did not work as expected in Kibana 7.x, restoring intended functionality.
+</details>
+<details>
+<summary><strong>🐞Fix</strong> (KBN) Fixed an issue where a custom session index name was not respected after Kibana restart.</summary>
+Ensured that custom session index names are retained after Kibana restarts, maintaining consistency in session management.
+</details>
+<details>
+<summary><strong>🐞Fix</strong> (ES) Fixed an issue preventing snapshots from being restored when no indices were specified.</summary>
+Addressed a bug where snapshot restoration failed when no indices were specified, ensuring smooth backup and recovery operations.
+</details>
+<details>
+<summary><strong>🐞Fix</strong> (ES) File ownership and permissions are now preserved during <code>ror-tools</code> patch and unpatch operations.</summary>
+Resolved an issue where file ownership and permissions were not preserved during `ror-tools` operations, ensuring system integrity and security.
+</details>
+
+### (2025-05-17) What's new in **ROR 1.64.2**
+<details>
+<summary><strong>🚀New</strong> (KBN) 9.0.3, 9.0.2, 8.18.3, 8.18.2, 8.17.8, 8.17.7, 7.17.29 support</summary>
+This update adds support for Kibana versions 9.0.2, 8.18.2, and 8.17.7, ensuring compatibility with the latest Kibana releases for users who rely on these versions.
+</details>
+<details>
+<summary><strong>🚀New</strong> (ES) 9.0.3, 9.0.2, 8.18.3, 8.18.2, 8.17.8, 8.17.7, 7.17.29 support</summary>
+The release now supports Elasticsearch versions 9.0.2, 8.18.2, and 8.17.7, providing users with the flexibility to upgrade or maintain their Elasticsearch clusters with these versions.
+</details>
+<details>
+<summary><strong>🐞Fix</strong> (ES) <a href="https://forum.readonlyrest.com/t/ror-1-64-0-for-es9-0-1-windows-setup/2778">Fixed an issue with Elasticsearch patching process on Windows operating systems</a></summary>
+Resolved a bug in the Elasticsearch patching process specific to Windows systems, ensuring smoother updates and installations for users on this platform.
+</details>
 
 ### (2025-05-13) What's new in **ROR 1.64.1**
 <details>
