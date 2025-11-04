@@ -28,15 +28,15 @@
 ### (2025-09-03) What's new in **ROR 1.66.1**
 <details>
 <summary><strong>🚀New</strong> (KBN) 9.1.5, 9.1.4, 9.0.8, 9.0.7 8.19.5, 8.19.4, 8.18.7 support</summary>
-This release adds official support for Kibana versions 9.1.5, 9.1.4, 9.0.8, 9.0.7, 8.19.5, 8.19.4, and 8.18.7. Users can now confidently deploy ReadonlyREST with these specific Kibana versions, ensuring compatibility and security.
+Added support for Kibana versions 9.1.5, 9.1.4, 9.0.8, 9.0.7, 8.19.5, 8.19.4, and 8.18.7. This ensures compatibility with the latest Kibana security patches and updates.
 </details>
 <details>
 <summary><strong>🚀New</strong> (ES) 9.1.5, 9.1.4, 9.0.8, 9.0.7, 8.19.5, 8.19.4, 8.18.8, 8.18.7 support</summary>
-Extended Elasticsearch compatibility to include versions 9.1.5, 9.1.4, 9.0.8, 9.0.7, 8.19.5, 8.19.4, 8.18.8, and 8.18.7. This ensures ReadonlyREST works seamlessly with the latest security patches and updates across multiple Elasticsearch release lines.
+Extended support for Elasticsearch versions 9.1.5, 9.1.4, 9.0.8, 9.0.7, 8.19.5, 8.19.4, 8.18.8, and 8.18.7. This includes compatibility with the latest Elasticsearch security updates and maintenance releases.
 </details>
 <details>
 <summary><strong>🐞Fix</strong> (ES) <a href="https://forum.readonlyrest.com/t/ror-1-65-1-java-17/2841">Patching issue in Elasticsearch 9.x, 8.19.x, and 8.18.x that caused startup failures on Java 17</a></summary>
-Resolved a critical compatibility issue where Elasticsearch clusters running on Java 17 would fail to start when using ReadonlyREST. This fix ensures proper initialization across Elasticsearch versions 9.x, 8.19.x, and 8.18.x, maintaining Java 17 support for modern deployments.
+Fixed a critical issue that prevented Elasticsearch clusters from starting up when using Java 17 with ROR plugin. This affected Elasticsearch versions 9.x, 8.19.x, and 8.18.x, ensuring smooth operation with modern Java runtime environments.
 </details>
 
 ### (2025-08-28) What's new in **ROR 1.66.0**
