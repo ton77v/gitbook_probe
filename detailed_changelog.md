@@ -1,43 +1,99 @@
 # Changelog
 
-* **🚀New** (ES) 9.2.0, 9.1.6, 8.19.6 support
-* **🧐 Enhancement** (ES) Allow using the `actions` rule with the `kibana` rule in the same block when `kibana.access: unrestricted`
-* **🐞 Fix** (KBN) Fixed JWT handling for wrong license edition
-* **🐞 Fix** (KBN) Suppressed “Forbidden” toast in Discover/Dashboard on Kibana 8.x–9.x
-* **🐞 Fix** (KBN) [Resolved report download failure on Kibana 9.1.x](https://forum.readonlyrest.com/t/unable-to-download-reports-from-kibana/2859/2)
-* **🐞 Fix** (KBN) Fixed timeout when saving Security settings
-* **🐞 Fix** (KBN) Restored visibility of reports when multiple data streams exist for a reporting index
-* **🐞 Fix** (KBN) Fixed invisible reports for non-tenancy users on Kibana 9.1.x
+### (2025-11-03) What’s new in **ROR 1.67.1**
+<details>
+<summary><strong>🚀New</strong> (KBN) 9.2.0, 9.1.6, 8.19.6 support</summary>
+Added official support for the latest Kibana versions 9.2.0, 9.1.6, and 8.19.6. This ensures compatibility with the most recent Kibana releases and their respective features.
+</details>
+<details>
+<summary><strong>🚀New</strong> (ES) 9.2.0, 9.1.6, 8.19.6 support</summary>
+Extended compatibility to include Elasticsearch versions 9.2.0, 9.1.6, and 8.19.6. This allows users to deploy ReadonlyREST with the latest Elasticsearch releases while maintaining security and functionality.
+</details>
+<details>
+<summary><strong>🧐 Enhancement</strong> (ES) Allow using the <code>actions</code> rule with the <code>kibana</code> rule in the same block when <code>kibana.access: unrestricted</code></summary>
+This enhancement enables combining the actions rule with the kibana rule in the same configuration block when kibana access is set to unrestricted. Previously, these rules had restrictions when used together, but now they can coexist for more flexible security configurations.
+</details>
+<details>
+<summary><strong>🐞 Fix</strong> (KBN) Fixed JWT handling for wrong license edition</summary>
+Resolved an issue where JWT authentication was not functioning correctly when the wrong license edition was detected. This fix ensures proper JWT token validation regardless of license type.
+</details>
 
-* **🚨 Security Fix** (KBN) [CVE-2025-58754](https://nvd.nist.gov/vuln/detail/CVE-2025-58754)
-* **🚨 Security Fix** (ES) [CVE-2025-58057](https://nvd.nist.gov/vuln/detail/CVE-2025-58057), [CVE-2025-58056](https://nvd.nist.gov/vuln/detail/CVE-2025-58056)
-* **🚀 New** (ES) [Added support for defining a custom audit serializer directly in ROR settings (no code required)](https://docs.readonlyrest.com/elasticsearch/audit#using-configurable-serializer)
-* **🚀 New** (ES) [Introduced new predefined audit serializers: `ReportingAllEventsAuditLogSerializer`, `ReportingAllEventsWithQueryAuditLogSerializer`](https://docs.readonlyrest.com/elasticsearch/audit#predefined-serializers)
-* **🚀 New** (ES) Added new rules: [`ror_kbn_authentication`](https://docs.readonlyrest.com/elasticsearch#ror_kbn_authentication) and [`ror_kbn_authorization`](https://docs.readonlyrest.com/elasticsearch#ror_kbn_authorization), as alternatives to the existing `ror_kbn_auth` rule
-* **🧐 Enhancement** (KBN) [Added OIDC `clock-skew-tolerance` configuration option in `kibana.yml`](https://docs.readonlyrest.com/kibana#clock-skew-tolerance)
-* **🧐 Enhancement** (KBN) [Added option to disable Kibana termination on watermark errors in `kibana.yml`](https://docs.readonlyrest.com/kibana#terminate-kibana-on-es-high-watermark)
-* **🐞 Fix** (KBN) Logout did not invalidate the app session when the `ror_kbn_auth` rule was used with local group definitions
-* **🐞 Fix** (KBN) [Restored keyword field value suggestions in Discover/Data View filters](https://forum.readonlyrest.com/t/kibana-data-view-filter-not-working-with-keyword/2843)
-* **🐞 Fix** (KBN) Integration-based options were visible in search results even when the app was marked as hidden
-* **🐞 Fix** (KBN) Index Management appeared in app search results even when the app was declared as hidden
-* **🐞 Fix** (KBN) Resolved an issue with CSRF token override when multiple browser tabs were open
-* **🐞 Fix** (KBN) Fixed OIDC compatibility for Kibana 7.10.2 and earlier
-* **🐞 Fix** (ES) Restored backward compatibility for custom audit log serializer implementations extending the `DefaultAuditLogSerializer` class. Custom serializers compiled against ROR 1.65 or 1.66 that use `DefaultAuditLogSerializer` must be recompiled to work correctly
-* **🐞 Fix** (ES) Fixed a defect that broke the "Snapshot and Restore" functionality in Kibana
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞 Fix** (KBN) Suppressed “Forbidden” toast in Discover/Dashboard on Kibana 8.x–9.x
+<details>
+<summary><strong>🐞 Fix</strong> (KBN) <a href="https://forum.readonlyrest.com/t/unable-to-download-reports-from-kibana/2859/2">Resolved report download failure on Kibana 9.1.x</a></summary>
+Fixed a critical bug that prevented users from downloading reports in Kibana 9.1.x versions. This issue was reported by multiple users in the community forum and affected report generation functionality.
+</details>
+<details>
+<summary><strong>🐞 Fix</strong> (KBN) Fixed timeout when saving Security settings</summary>
+Resolved a timeout issue that occurred when users attempted to save security settings in Kibana. This fix ensures that configuration changes are saved promptly without timing out.
+</details>
+<details>
+<summary><strong>🐞 Fix</strong> (KBN) Restored visibility of reports when multiple data streams exist for a reporting index</summary>
+Fixed a bug where reports became invisible when multiple data streams were configured for the same reporting index. This restoration ensures all reports are properly displayed regardless of data stream configuration.
+</details>
+<details>
+<summary><strong>🐞 Fix</strong> (KBN) Fixed invisible reports for non-tenancy users on Kibana 9.1.x</summary>
+Resolved an issue where reports were not visible to users without tenancy permissions in Kibana 9.1.x. This fix ensures proper report visibility for all user types regardless of tenancy configuration.
+</details>
+
+### (2025-10-14) What’s new in **ROR 1.67.0**
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🚨 Security Fix** (KBN) [CVE-2025-58754](https://nvd.nist.gov/vuln/detail/CVE-2025-58754)
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🚨 Security Fix** (ES) [CVE-2025-58057](https://nvd.nist.gov/vuln/detail/CVE-2025-58057), [CVE-2025-58056](https://nvd.nist.gov/vuln/detail/CVE-2025-58056)
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🚀 New** (ES) [Added support for defining a custom audit serializer directly in ROR settings (no code required)](https://docs.readonlyrest.com/elasticsearch/audit#using-configurable-serializer)
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🚀 New** (ES) [Introduced new predefined audit serializers: `ReportingAllEventsAuditLogSerializer`, `ReportingAllEventsWithQueryAuditLogSerializer`](https://docs.readonlyrest.com/elasticsearch/audit#predefined-serializers)
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🚀 New** (ES) Added new rules: [`ror_kbn_authentication`](https://docs.readonlyrest.com/elasticsearch#ror_kbn_authentication) and [`ror_kbn_authorization`](https://docs.readonlyrest.com/elasticsearch#ror_kbn_authorization), as alternatives to the existing `ror_kbn_auth` rule
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🧐 Enhancement** (KBN) [Added OIDC `clock-skew-tolerance` configuration option in `kibana.yml`](https://docs.readonlyrest.com/kibana#clock-skew-tolerance)
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🧐 Enhancement** (KBN) [Added option to disable Kibana termination on watermark errors in `kibana.yml`](https://docs.readonlyrest.com/kibana#terminate-kibana-on-es-high-watermark)
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞 Fix** (KBN) Logout did not invalidate the app session when the `ror_kbn_auth` rule was used with local group definitions
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞 Fix** (KBN) [Restored keyword field value suggestions in Discover/Data View filters](https://forum.readonlyrest.com/t/kibana-data-view-filter-not-working-with-keyword/2843)
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞 Fix** (KBN) Integration-based options were visible in search results even when the app was marked as hidden
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞 Fix** (KBN) Index Management appeared in app search results even when the app was declared as hidden
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞 Fix** (KBN) Resolved an issue with CSRF token override when multiple browser tabs were open
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞 Fix** (KBN) Fixed OIDC compatibility for Kibana 7.10.2 and earlier
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞 Fix** (ES) Restored backward compatibility for custom audit log serializer implementations extending the `DefaultAuditLogSerializer` class. Custom serializers compiled against ROR 1.65 or 1.66 that use `DefaultAuditLogSerializer` must be recompiled to work correctly
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞 Fix** (ES) Fixed a defect that broke the "Snapshot and Restore" functionality in Kibana
 
 ### (2025-09-03) What's new in **ROR 1.66.1**
-<details>
-<summary><strong>🚀New</strong> (KBN) 9.1.5, 9.1.4, 9.0.8, 9.0.7 8.19.5, 8.19.4, 8.18.7 support</summary>
-Added support for Kibana versions 9.1.5, 9.1.4, 9.0.8, 9.0.7, 8.19.5, 8.19.4, and 8.18.7. This ensures compatibility with the latest Kibana security patches and updates.
-</details>
-<details>
-<summary><strong>🚀New</strong> (ES) 9.1.5, 9.1.4, 9.0.8, 9.0.7, 8.19.5, 8.19.4, 8.18.8, 8.18.7 support</summary>
-Extended support for Elasticsearch versions 9.1.5, 9.1.4, 9.0.8, 9.0.7, 8.19.5, 8.19.4, 8.18.8, and 8.18.7. This includes compatibility with the latest Elasticsearch security updates and maintenance releases.
-</details>
-<details>
-<summary><strong>🐞Fix</strong> (ES) <a href="https://forum.readonlyrest.com/t/ror-1-65-1-java-17/2841">Patching issue in Elasticsearch 9.x, 8.19.x, and 8.18.x that caused startup failures on Java 17</a></summary>
-Fixed a critical issue that prevented Elasticsearch clusters from starting up when using Java 17 with ROR plugin. This affected Elasticsearch versions 9.x, 8.19.x, and 8.18.x, ensuring smooth operation with modern Java runtime environments.
-</details>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🚀New** (KBN) 9.1.5, 9.1.4, 9.0.8, 9.0.7 8.19.5, 8.19.4, 8.18.7 support
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🚀New** (ES) 9.1.5, 9.1.4, 9.0.8, 9.0.7, 8.19.5, 8.19.4, 8.18.8, 8.18.7 support
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞Fix** (ES) [Patching issue in Elasticsearch 9.x, 8.19.x, and 8.18.x that caused startup failures on Java 17](https://forum.readonlyrest.com/t/ror-1-65-1-java-17/2841)
 
 ### (2025-08-28) What's new in **ROR 1.66.0**
 
