@@ -8,38 +8,38 @@
 ### (2025-11-03) What’s new in **ROR 1.67.1**
 <details>
 <summary><strong>🚀 New</strong> (KBN) 9.2.0, 9.1.6, 8.19.6 support</summary>
-Added official support for Kibana versions 9.2.0, 9.1.6, and 8.19.6, ensuring compatibility with the latest Kibana releases while maintaining ReadonlyREST security functionality.
+This release adds official support for Kibana versions 9.2.0, 9.1.6, and 8.19.6, ensuring full ReadonlyREST functionality and security features.
 </details>
 <details>
 <summary><strong>🚀 New</strong> (ES) 9.2.0, 9.1.6, 8.19.6 support</summary>
-Extended compatibility to include Elasticsearch versions 9.2.0, 9.1.6, and 8.19.6, allowing users to deploy ReadonlyREST with these versions without compatibility issues.
+Official support for Elasticsearch versions 9.2.0, 9.1.6, and 8.19.6 is now available, maintaining comprehensive security and access control.
 </details>
 <details>
 <summary><strong>🧐 Enhancement</strong> (ES) Allow using the <code>actions</code> rule with the <code>kibana</code> rule in the same block when <code>kibana.access: unrestricted</code></summary>
-This enhancement enables combining the `actions` rule with the `kibana` rule within the same security block when Kibana access is set to unrestricted, providing greater flexibility in access control definitions.
+Administrators can now combine `actions` and `kibana` rules in the same security block for more flexible configuration of complex security policies.
 </details>
 <details>
 <summary><strong>🐞 Fix</strong> (KBN) Fixed JWT handling for wrong license edition</summary>
-Resolved an issue where JWT authentication was not functioning correctly with incorrect license editions, ensuring proper JWT token validation regardless of license type.
+Resolved JWT authentication issues when using incorrect license editions, ensuring proper token validation regardless of license type.
 </details>
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞 Fix** (KBN) Suppressed “Forbidden” toast in Discover/Dashboard on Kibana 8.x–9.x
 <details>
 <summary><strong>🐞 Fix</strong> (KBN) <a href="https://forum.readonlyrest.com/t/unable-to-download-reports-from-kibana/2859/2">Resolved report download failure on Kibana 9.1.x</a></summary>
-Fixed a critical issue where users were unable to download reports from Kibana 9.1.x, resolving a community-reported problem that affected report generation functionality.
+Fixed a community-reported bug that prevented report downloads in Kibana 9.1.x, restoring full reporting functionality.
 </details>
 <details>
 <summary><strong>🐞 Fix</strong> (KBN) Fixed timeout when saving Security settings</summary>
-Addressed a performance issue where saving Security settings in Kibana was timing out, improving the reliability of configuration changes.
+Resolved timeout issues when saving Security settings in Kibana, ensuring configuration changes are saved promptly.
 </details>
 <details>
 <summary><strong>🐞 Fix</strong> (KBN) Restored visibility of reports when multiple data streams exist for a reporting index</summary>
-Fixed an issue where reports were not visible when multiple data streams existed for a reporting index, ensuring all generated reports are properly displayed.
+Fixed report visibility issues when multiple data streams exist for reporting indices, ensuring all reports are properly displayed.
 </details>
 <details>
 <summary><strong>🐞 Fix</strong> (KBN) Fixed invisible reports for non-tenancy users on Kibana 9.1.x</summary>
-Resolved a bug where reports were not visible to non-tenancy users specifically in Kibana 9.1.x, ensuring all users can properly view their reports.
+Resolved a bug where reports were not visible to non-tenancy users in Kibana 9.1.x, ensuring all users can access generated reports.
 </details>
 
 ### (2025-10-14) What’s new in **ROR 1.67.0**
