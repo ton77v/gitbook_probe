@@ -3,19 +3,19 @@
 ### (2025-11-13) What’s new in **ROR 1.67.2**
 <details>
 <summary><strong>🚀 New</strong> (KBN) 9.2.1, 9.1.7, 8.19.7 support</summary>
-ReadonlyREST now officially supports Kibana versions 9.2.1, 9.1.7, and 8.19.7. This ensures compatibility with the latest Kibana releases and their respective security patches and features.
+ReadonlyREST now supports the latest Kibana versions 9.2.1, 9.1.7, and 8.19.7, ensuring compatibility with recent releases while maintaining full security functionality.
 </details>
 <details>
 <summary><strong>🚀 New</strong> (ES) 9.2.1, 9.1.7, 8.19.7 support</summary>
-The plugin now supports Elasticsearch versions 9.2.1, 9.1.7, and 8.19.7. These versions include important bug fixes and security updates, ensuring your Elasticsearch clusters remain secure and stable with ReadonlyREST protection.
+The plugin now supports Elasticsearch versions 9.2.1, 9.1.7, and 8.19.7, allowing users to deploy the latest Elasticsearch versions with all security features intact.
 </details>
 <details>
 <summary><strong>🐞 Fix</strong> (KBN) Fixed SAML/OIDC provider support behind a reverse proxy when <code>server.rewriteBasePath: false</code> is set in kibana.yml</summary>
-Resolved an issue where SAML and OIDC authentication providers would fail when Kibana was deployed behind a reverse proxy with `server.rewriteBasePath: false` configuration. This fix ensures proper authentication flow in reverse proxy environments without base path rewriting.
+Resolved an issue where SAML and OIDC authentication would fail in reverse proxy configurations without base path rewriting, ensuring reliable authentication flows.
 </details>
 <details>
 <summary><strong>🐞 Fix</strong> (ES) Delegated handling of certain internal exceptions to Elasticsearch, preserving native error responses</summary>
-Improved error handling by delegating specific internal exceptions to Elasticsearch's native error handling system. This preserves the original Elasticsearch error responses and ensures better compatibility with client applications that rely on standard error formats.
+ROR now properly delegates specific exception handling to Elasticsearch's native system, preserving familiar error messages and improving compatibility.
 </details>
 
 ### (2025-11-03) What’s new in **ROR 1.67.1**
