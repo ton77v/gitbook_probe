@@ -1,9 +1,22 @@
 # Changelog
 
-* **🚀 New** (KBN) 9.2.1, 9.1.7, 8.19.7 support
-* **🚀 New** (ES) 9.2.1, 9.1.7, 8.19.7 support
-* **🐞 Fix** (KBN) Fixed SAML/OIDC provider support behind a reverse proxy when `server.rewriteBasePath: false` is set in kibana.yml
-* **🐞 Fix** (ES) Delegated handling of certain internal exceptions to Elasticsearch, preserving native error responses
+### (2025-11-13) What’s new in **ROR 1.67.2**
+<details>
+<summary><strong>🚀 New</strong> (KBN) 9.2.1, 9.1.7, 8.19.7 support</summary>
+ReadonlyREST now supports the latest Kibana maintenance releases including 9.2.1, 9.1.7, and 8.19.7. These versions include various bug fixes and stability improvements across the Kibana platform, ensuring compatibility with the latest security patches and performance enhancements.
+</details>
+<details>
+<summary><strong>🚀 New</strong> (ES) 9.2.1, 9.1.7, 8.19.7 support</summary>
+ReadonlyREST adds support for Elasticsearch maintenance releases 9.2.1, 9.1.7, and 8.19.7. These versions primarily contain bug fixes, security updates, and dependency upgrades including JDK updates, ensuring users can leverage the latest stable Elasticsearch versions with enhanced security and performance.
+</details>
+<details>
+<summary><strong>🐞 Fix</strong> (KBN) Fixed SAML/OIDC provider support behind a reverse proxy when <code>server.rewriteBasePath: false</code> is set in kibana.yml</summary>
+This fix resolves an issue where SAML and OIDC authentication providers would fail when Kibana is deployed behind a reverse proxy with the `server.rewriteBasePath: false` configuration. The plugin now correctly handles authentication flows in this deployment scenario, ensuring seamless SSO integration.
+</details>
+<details>
+<summary><strong>🐞 Fix</strong> (ES) Delegated handling of certain internal exceptions to Elasticsearch, preserving native error responses</summary>
+ReadonlyREST now properly delegates specific internal exception handling to Elasticsearch's native error management system. This ensures that error responses maintain their original format and behavior, providing better integration with monitoring tools and preserving the expected error handling patterns for applications.
+</details>
 
 ### (2025-11-03) What’s new in **ROR 1.67.1**
 <details>
