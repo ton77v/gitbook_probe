@@ -1,5 +1,11 @@
 # Changelog
 
+### (2025-11-29) What’s new in **ROR 1.67.3**
+<details>
+<summary><strong>🐞 Fix</strong> (ES) Resolved index resolution compatibility issue with Elasticsearch 9.1.7</summary>
+This update fixes compatibility problems that occurred when using ReadonlyREST with Elasticsearch 9.1.7, ensuring proper index resolution functionality without requiring configuration changes.
+</details>
+
 ### (2025-11-13) What’s new in **ROR 1.67.2**
 <details>
 <summary><strong>🚀 New</strong> (KBN) 9.2.1, 9.1.7, 8.19.7 support</summary>
