@@ -3,7 +3,7 @@
 ### (2025-11-29) What’s new in **ROR 1.67.3**
 <details>
 <summary><strong>🐞 Fix</strong> (ES) Resolved index resolution compatibility issue with Elasticsearch 9.1.7</summary>
-This fix addresses a compatibility problem that occurred when ReadonlyREST was used with Elasticsearch 9.1.7, ensuring proper functionality with the latest Elasticsearch version.
+This fix addresses a compatibility problem that occurred when using ReadonlyREST with Elasticsearch 9.1.7. The issue prevented proper index resolution functionality, which could affect how the plugin handles index patterns and access control rules. The resolution ensures seamless operation with the latest Elasticsearch version.
 </details>
 
 ### (2025-11-13) What’s new in **ROR 1.67.2**
