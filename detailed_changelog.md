@@ -283,15 +283,18 @@ Fixed a compatibility issue that could cause incorrect index matching in securit
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞 Fix** (ES) Fixed a defect that broke the "Snapshot and Restore" functionality in Kibana
 
 ### (2025-09-03) What's new in **ROR 1.66.1**
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🚀 New** (KBN) 9.1.5, 9.1.4, 9.0.8, 9.0.7 8.19.5, 8.19.4, 8.18.7 support
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🚀 New** (ES) 9.1.5, 9.1.4, 9.0.8, 9.0.7, 8.19.5, 8.19.4, 8.18.8, 8.18.7 support
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞 Fix** (ES) [Patching issue in Elasticsearch 9.x, 8.19.x, and 8.18.x that caused startup failures on Java 17](https://forum.readonlyrest.com/t/ror-1-65-1-java-17/2841)
+<details>
+<summary><strong>🚀 New</strong> (KBN) 9.1.5, 9.1.4, 9.0.8, 9.0.7 8.19.5, 8.19.4, 8.18.7 support</summary>
+Ensures compatibility with the latest Kibana security and maintenance releases, including versions 9.1.5, 9.1.4, 9.0.8, 9.0.7, 8.19.5, 8.19.4, and 8.18.7.
+</details>
+<details>
+<summary><strong>🚀 New</strong> (ES) 9.1.5, 9.1.4, 9.0.8, 9.0.7, 8.19.5, 8.19.4, 8.18.8, 8.18.7 support</summary>
+Adds official support for the latest Elasticsearch security and maintenance releases across multiple major branches, keeping your clusters up-to-date and secure.
+</details>
+<details>
+<summary><strong>🐞 Fix</strong> (ES) <a href="https://forum.readonlyrest.com/t/ror-1-65-1-java-17/2841">Patching issue in Elasticsearch 9.x, 8.19.x, and 8.18.x that caused startup failures on Java 17</a></summary>
+Resolves a critical startup failure (UnsupportedClassVersionError) for users running Elasticsearch on Java 17. Version 1.66.1 is now correctly compiled for Java 17 compatibility.
+</details>
 
 ### (2025-08-28) What's new in **ROR 1.66.0**
 
