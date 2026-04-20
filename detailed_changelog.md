@@ -179,15 +179,18 @@ Resolves cluster resolution problems that caused Kibana errors and unexpected us
 </details>
 
 ### (2025-11-29) What’s new in **ROR 1.67.3**
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🚀 New** (KBN) 9.2.3, 9.2.2, 9.1.9, 9.1.8, 8.19.9, 8.19.8 support
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🚀 New** (ES) 9.2.3, 9.2.2, 9.1.9, 9.1.8, 8.19.9, 8.19.8 support
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**🐞 Fix** (ES) Resolved index resolution compatibility issue with Elasticsearch 9.1.7
+<details>
+<summary><strong>🚀 New</strong> (KBN) 9.2.3, 9.2.2, 9.1.9, 9.1.8, 8.19.9, 8.19.8 support</summary>
+Ensures compatibility with the latest Kibana security patches and features, allowing users to upgrade their Kibana deployments while maintaining ROR's security controls.
+</details>
+<details>
+<summary><strong>🚀 New</strong> (ES) 9.2.3, 9.2.2, 9.1.9, 9.1.8, 8.19.9, 8.19.8 support</summary>
+Adds official support for the latest Elasticsearch versions, which include important security updates and bug fixes from Elastic, ensuring seamless integration with all maintained security features.
+</details>
+<details>
+<summary><strong>🐞 Fix</strong> (ES) Resolved index resolution compatibility issue with Elasticsearch 9.1.7</summary>
+Fixed a compatibility issue that could cause incorrect index matching in security rules or failures when applying access controls to specific indices on Elasticsearch 9.1.7.
+</details>
 
 ### (2025-11-13) What’s new in **ROR 1.67.2**
 
